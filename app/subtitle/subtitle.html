@@ -1,0 +1,25 @@
+<h1>Subtitles</h1>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <video-player video-url="public/videos/video1.mp4" video-current-time="SubCtrl.videoCurrentTime"></video-player>
+    </div>
+    <div class="col-md-6">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Subtitle</th>
+            <th scope="col">Start</th>
+            <th scope="col">End</th>
+          </tr>
+        </thead>
+        <tr ng-repeat="sub in SubCtrl.subtitles">
+          <td>{{sub.text}}</td>
+          <td><input type="text" ng-model="sub.start" /></td>
+          <td><input type="text" ng-model="sub.end" /></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

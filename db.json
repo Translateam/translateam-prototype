@@ -15,7 +15,7 @@
     { "id": 4, "text": "ピカチュウ、君に決めた", "sceneId": 4 }
   ],
   "translations": [
-    { "id": 1, "text": "Pikachu, I choose you", "sceneId": 1 },
+    { "id": 1, "text": "Pikachu, I choose you\nSomething else", "sceneId": 1 },
     { "id": 2, "text": "Pikachu, I choose you", "sceneId": 2 },
     { "id": 3, "text": "Pikachu, I choose you", "sceneId": 3 },
     { "id": 4, "text": "Pikachu, I choose you", "sceneId": 4 }
