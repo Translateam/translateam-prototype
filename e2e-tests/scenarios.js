@@ -39,4 +39,15 @@ describe('my app', function() {
     });
 
   });
+
+  describe('view3', function () {
+
+    beforeEach(function() {
+      browser.get('index.html#!/project');
+    });
+
+    it('should render project when user navigates to /project', function() {
+
+    });
+  });
 });

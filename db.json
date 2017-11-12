@@ -10,25 +10,29 @@
       "id": 1,
       "title": "Scene 1",
       "videoUrl": "public/videos/video1.mp4",
-      "projectId": 1
+      "projectId": 1,
+      "projectStage": "todo"
     },
     {
       "id": 2,
       "title": "Scene 2",
       "videoUrl": "public/videos/video1.mp4",
-      "projectId": 1
+      "projectId": 1,
+      "projectStage": "transcribe"
     },
     {
       "id": 3,
       "title": "Scene 3",
       "videoUrl": "public/videos/video1.mp4",
-      "projectId": 1
+      "projectId": 1,
+      "projectStage": "done"
     },
     {
       "id": 4,
       "title": "Scene 4",
       "videoUrl": "public/videos/video1.mp4",
-      "projectId": 1
+      "projectId": 1,
+      "projectStage": "todo"
     }
   ],
   "transcripts": [
