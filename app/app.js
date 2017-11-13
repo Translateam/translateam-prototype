@@ -9,6 +9,6 @@ angular.module('translateam', [
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
-
+ // $routeProvider.when('/', { templateUrl: 'view1', label: 'Home' })
   $routeProvider.otherwise({redirectTo: '/view1'});
 }]);
