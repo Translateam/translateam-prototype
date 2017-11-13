@@ -1,0 +1,65 @@
+
+<div class="container-fluid">
+  <div class="row">
+    <h1>
+      Subtitles
+    </h1>
+    <help-dialog title="Subtitles Help">
+      <p>On this page you can create subtitles for the video from
+      your previously created translation.</p>
+      <p>Use the table on the right to set the start and end timestamp
+      (in seconds) for each line of the translation. You can also
+      click the <i class="fa fa-clock-o"></i> button next to the start
+      and end text inputs to insert the current time of the video playback.</p>
+      <p>You can use the video player on the left to review your subtitles and
+      check their timing.
+    </help-dialog>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <video-player video-url="{{SubCtrl.videoUrl}}" video-current-time="SubCtrl.videoCurrentTime"></video-player>
+      <div style="display: flex; align-items: center; justify-content: center;">
+        <h2 style="color:red; position:absolute; top: 75%;">
+          {{SubCtrl.getCurrentSubtitle()}}
+        </h2>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div style="max-height:500px; overflow: auto;">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Subtitle</th>
+              <th scope="col">Start</th>
+              <th scope="col">End</th>
+            </tr>
+          </thead>
+          <tr ng-repeat="sub in SubCtrl.subtitles.subs">
+            <td>{{sub.text}}</td>
+            <td>
+              <input type="text" ng-model="sub.start" />
+              <button type="button" class="btn btn-light" title="Record current video time" ng-click="SubCtrl.setTimeStamp(sub, 'start')">
+                 <i class="fa fa-clock-o"></i>
+              </button>
+            </td>
+            <td>
+              <input type="text" ng-model="sub.end" />
+              <button type="button" class="btn btn-light" title="Record current video time" ng-click="SubCtrl.setTimeStamp(sub, 'end')">
+                 <i class="fa fa-clock-o"></i>
+              </button>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="row">
+        <div class="col-md-9">
+          <button type="button" class="btn btn-light" title="Leave a comment"><i class="fa fa-comment"></i></button>
+          <button type="button" class="btn btn-light" title="Open glossary"><i class="fa fa-book"></i></button>
+        </div>
+        <div class="col-md-3">
+          <button type="button" class="btn btn-primary" ng-click="SubCtrl.saveAndClose()">Save & Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,26 +1,96 @@
 {
   "projects": [
-    { "id": 1, "title": "Pokemon Episode 8" }
+    {
+      "id": 1,
+      "title": "Pokemon Episode 8"
+    }
   ],
   "scenes": [
-    { "id": 1, "title": "Scene 1", "videoUrl": "scene1.mp4", "projectId": 1 },
-    { "id": 2, "title": "Scene 2", "videoUrl": "scene1.mp4", "projectId": 1 },
-    { "id": 3, "title": "Scene 3", "videoUrl": "scene1.mp4", "projectId": 1 },
-    { "id": 4, "title": "Scene 4", "videoUrl": "scene1.mp4", "projectId": 1 }
+    {
+      "id": 1,
+      "title": "Scene 1",
+      "videoUrl": "public/videos/video1.mp4",
+      "projectId": 1
+    },
+    {
+      "id": 2,
+      "title": "Scene 2",
+      "videoUrl": "public/videos/video1.mp4",
+      "projectId": 1
+    },
+    {
+      "id": 3,
+      "title": "Scene 3",
+      "videoUrl": "public/videos/video1.mp4",
+      "projectId": 1
+    },
+    {
+      "id": 4,
+      "title": "Scene 4",
+      "videoUrl": "public/videos/video1.mp4",
+      "projectId": 1
+    }
   ],
   "transcripts": [
-    { "id": 1, "text": "ピカチュウ、君に決めた", "sceneId": 1 },
-    { "id": 2, "text": "ピカチュウ、君に決めた", "sceneId": 2 },
-    { "id": 3, "text": "ピカチュウ、君に決めた", "sceneId": 3 },
-    { "id": 4, "text": "ピカチュウ、君に決めた", "sceneId": 4 }
+    {
+      "id": 1,
+      "text": "ピカチュウ、君に決めた",
+      "sceneId": 1
+    },
+    {
+      "id": 2,
+      "text": "ピカチュウ、君に決めた",
+      "sceneId": 2
+    },
+    {
+      "id": 3,
+      "text": "ピカチュウ、君に決めた",
+      "sceneId": 3
+    },
+    {
+      "id": 4,
+      "text": "ピカチュウ、君に決めた",
+      "sceneId": 4
+    }
   ],
   "translations": [
-    { "id": 1, "text": "Pikachu, I choose you", "sceneId": 1 },
-    { "id": 2, "text": "Pikachu, I choose you", "sceneId": 2 },
-    { "id": 3, "text": "Pikachu, I choose you", "sceneId": 3 },
-    { "id": 4, "text": "Pikachu, I choose you", "sceneId": 4 }
+    {
+      "id": 1,
+      "text": "Pikachu, I choose you\nSomething else",
+      "sceneId": 1
+    },
+    {
+      "id": 2,
+      "text": "Pikachu, I choose you",
+      "sceneId": 2
+    },
+    {
+      "id": 3,
+      "text": "Pikachu, I choose you",
+      "sceneId": 3
+    },
+    {
+      "id": 4,
+      "text": "Pikachu, I choose you",
+      "sceneId": 4
+    }
   ],
   "subtitles": [
-    { "id": 1, "subs": [{ "text": "Pikachu, I choose you", "start": 0, "end": 10}], "sceneId": 1 }
+    {
+      "sceneId": "1",
+      "subs": [
+        {
+          "text": "Pikachu, I choose you",
+          "start": 3.211235,
+          "end": 6.716963
+        },
+        {
+          "text": "Something else",
+          "start": 9.712587,
+          "end": 13.961384
+        }
+      ],
+      "id": 1
+    }
   ]
 }
