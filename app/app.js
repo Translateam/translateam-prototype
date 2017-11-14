@@ -9,7 +9,8 @@ var app = angular.module('translateam', [
   'translateam.subtitle',
   'translateam.version',
   'translateam.video-player',
-  'translateam.project'
+  'translateam.project',
+  'translateam.help-dialog'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');

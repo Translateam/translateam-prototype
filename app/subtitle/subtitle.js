@@ -69,6 +69,9 @@ angular.module('translateam.subtitle', ['ngRoute'])
    * over the video based on the current timestamp.
    */
   self.getCurrentSubtitle = function() {
+    if(!self.subtitles) {
+      return '';
+    }
     for (var i = self.subtitles.subs.length - 1; i >= 0; i--) {
       var curr = self.subtitles.subs[i];
       if(curr.start !== null && curr.end !== null &&

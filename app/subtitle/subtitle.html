@@ -1,11 +1,25 @@
-<h1>Subtitles</h1>
 
 <div class="container-fluid">
+  <div class="row">
+    <h1>
+      Subtitles
+    </h1>
+    <help-dialog title="Subtitles Help">
+      <p>On this page you can create subtitles for the video from
+      your previously created translation.</p>
+      <p>Use the table on the right to set the start and end timestamp
+      (in seconds) for each line of the translation. You can also
+      click the <i class="fa fa-clock-o"></i> button next to the start
+      and end text inputs to insert the current time of the video playback.</p>
+      <p>You can use the video player on the left to review your subtitles and
+      check their timing.
+    </help-dialog>
+  </div>
   <div class="row">
     <div class="col-md-6">
       <video-player video-url="{{SubCtrl.videoUrl}}" video-current-time="SubCtrl.videoCurrentTime"></video-player>
       <div style="display: flex; align-items: center; justify-content: center;">
-        <h2 style="color:red; position:absolute; top: 75%;">
+        <h2 style="color:red; position:absolute; top: 60%;">
           {{SubCtrl.getCurrentSubtitle()}}
         </h2>
       </div>
