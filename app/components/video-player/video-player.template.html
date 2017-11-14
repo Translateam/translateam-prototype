@@ -2,3 +2,10 @@
   controls
   preload="auto"
   style="width:100%"></video>
+<div id="waveform"></div>
+<button class="btn btn-primary" ng-click="playPause()">
+  <i class="fa fa-play"></i> / <i class="fa fa-pause"></i>
+</button>
+<strong>
+{{videoCurrentTime | secondsToDateTime | date:'mm:ss'}} / {{videoDuration | secondsToDateTime | date:'mm:ss'}}
+</strong>
