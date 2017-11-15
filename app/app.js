@@ -6,6 +6,7 @@ angular.module('translateam', [
   'ngResource',
   'ncy-angular-breadcrumb',
   'ui.router',
+  'translateam.translateService',
   'translateam.view1',
   'translateam.view2',
   'translateam.subtitle',

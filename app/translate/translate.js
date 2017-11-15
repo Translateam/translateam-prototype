@@ -15,7 +15,7 @@ angular.module('translateam.translate', ['ngRoute'])
     });
   }])
 
-  .controller('translateCtrl', ['$resource', '$location', function($resource, $location) {
+  .controller('translateCtrl', ['$resource', '$location', 'translateService', function($resource, $location, translateService) {
     var self = this;
     var Scene = $resource('/scenes/:sceneId');
     var Transcription = $resource('/scenes/:sceneId/transcripts');
@@ -35,23 +35,27 @@ angular.module('translateam.translate', ['ngRoute'])
       if(scene) {
         self.scene = scene;
         self.videoUrl = scene.videoUrl
-        console.log(self.videoUrl)
       }
     })
     Transcription.query({sceneId: sceneId}).$promise.then(function(transcriptions) {
-    self.transcripts =transcriptions;
-      console.log( self.transcripts);
-
-
-  })
+      self.transcripts =transcriptions;
+    })
     Translation.query({sceneId: sceneId}).$promise.then(function(translations) {
        self.translations = translations;
-        console.log(self.translations);
     })
 
+    self.autoTranslate = function() {
+      var selection = window.getSelection().toString();
+      if(!selection.length) {
+        alert('You must select some text in the transcription to auto-translate.');
+      } else if(self.translations.length) {
+        translateService(selection).then(function(translation) {
+          self.translations[0].text += translation;
+        });
+      }
+    }
+
     self.saveAndClose = function(translationValue) {
-      console.log("in function")
-      console.log(self.translations);
       if(self.translations.length > 0){
         self.translations =self.translations[0];
         var translationId  = self.translations.id;

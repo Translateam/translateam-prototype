@@ -15,6 +15,7 @@ angular.module('translateam.video-player', [])
   },
   controller: function($scope, $element) {
     $scope.videoDuration = 0;
+    $scope.videoCurrentTime = 0;
 
     $scope.onTimeUpdate = function() {
       var video = $element.find('video')[0];
@@ -35,11 +36,10 @@ angular.module('translateam.video-player', [])
       backend: 'MediaElement',
       hideScrollbar: true
     });
-    var mediaElt = document.querySelector('video');
-
     setTimeout(function() {
+    var mediaElt = document.querySelector('video');
       wavesurfer.load($element.find('video')[0]);
-    }, 0)
+    }, 100)
 
     $scope.playPause = function() {
       wavesurfer.playPause();

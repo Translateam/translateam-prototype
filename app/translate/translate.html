@@ -16,12 +16,13 @@
         </thead>
         <tbody>
         <tr style="text-align: center">
-          <td><textarea  rows="8">{{TransCtrl.transcripts[0].text}}</textarea></td>
-          <td><textarea ng-model="TransCtrl.translations[0].text" id="textbox1" rows="8">{{TransCtrl.translations[0].text}}</textarea></td>
+          <td>{{TransCtrl.transcripts[0].text}}</td>
+          <td><textarea style="width:100%" ng-model="TransCtrl.translations[0].text" id="textbox1" rows="8">{{TransCtrl.translations[0].text}}</textarea></td>
         </tr>
 
         </tbody>
       </table>
+      <button type="button" class="btn btn-light" title="Auto-translate" ng-click="TransCtrl.autoTranslate()"><i class="fa fa-globe"></i></button>
       <button type="button" class="btn btn-light" title="Leave a comment"><i class="fa fa-comment"></i></button>
       <button type="button" class="btn btn-light" title="Open glossary"><i class="fa fa-book"></i></button>
       <button type="button" class="btn btn-primary pull-right" ng-click="TransCtrl.saveAndClose(TransCtrl.translations[0].text)">Save & Close</button>
