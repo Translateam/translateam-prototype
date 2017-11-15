@@ -20,6 +20,7 @@ angular.module('translateam.translate', ['ngRoute'])
     var Scene = $resource('/scenes/:sceneId');
     var Transcription = $resource('/scenes/:sceneId/transcripts');
     var Translation = $resource('/scenes/:sceneId/translations');
+    var Comments = $resource('http://localhost:3000/scenes/:sceneId/comments');
     var TranslationUpdate = $resource('http://localhost:3000/translations/:resId',
       null,
       {
@@ -28,7 +29,7 @@ angular.module('translateam.translate', ['ngRoute'])
       });
    // self.translations = null;
     // Get the current scene ID from the URL
-    var sceneId = $location.search().scene || 4;
+    var sceneId = $location.search().scene || 1;
 
     // Get the current scene in order to grab the video URL
     Scene.get({sceneId: sceneId}).$promise.then(function(scene) {
@@ -41,12 +42,16 @@ angular.module('translateam.translate', ['ngRoute'])
     Transcription.query({sceneId: sceneId}).$promise.then(function(transcriptions) {
     self.transcripts =transcriptions;
       console.log( self.transcripts);
-
-
   })
     Translation.query({sceneId: sceneId}).$promise.then(function(translations) {
        self.translations = translations;
         console.log(self.translations);
+    })
+
+    Comments.query({sceneId: sceneId}).$promise.then(function(comments) {
+      self.comments = comments;
+      console.log("comments");
+      console.log(self.comments);
     })
 
     self.saveAndClose = function(translationValue) {

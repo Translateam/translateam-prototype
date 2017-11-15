@@ -1,4 +1,20 @@
 {
+
+  "comments": [
+    {
+      "sceneId": "1",
+      "comments": [
+        {
+          "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        },
+        {
+          "text": "Something else"
+        }
+      ],
+      "id": 1
+    }
+  ],
+
   "projects": [
     {
       "id": 1,
@@ -56,7 +72,8 @@
   "translations": [
     {
       "id": 3,
-      "sceneId": 3
+      "sceneId": 3,
+      "text": "Pikachu, I choose you"
     },
     {
       "id": 4,
@@ -64,40 +81,14 @@
       "text": "abcdefg"
     },
     {
-      "id": 5
-    },
-    {
-      "0": {
-        "text": "test test",
-        "sceneId": 2,
-        "id": 2
-      },
-      "id": 2
-    },
-    {
-      "id": 6,
-      "sceneId": 1
-    },
-    {
-      "id": 7,
-      "sceneId": 2
-    },
-    {
-      "id": 8,
-      "sceneId": 1
-    },
-    {
       "sceneId": 1,
       "text": "hello",
       "id": 9
     },
     {
-      "sceneId": 3,
-      "id": 10
-    },
-    {
-      "sceneId": 4,
-      "id": 11
+      "sceneId": 1,
+      "text": "Pikachu, I choose you",
+      "id": 9
     }
   ],
   "subtitles": [
