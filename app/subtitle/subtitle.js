@@ -10,8 +10,10 @@ angular.module('translateam.subtitle', ['ngRoute'])
   });
 }])
 
-.controller('SubtitleCtrl', ['$resource', '$location', function($resource, $location) {
+.controller('SubtitleCtrl', ['$resource', '$location', function($resource, $location, $routeParams) {
   var self = this;
+
+  console.log($routeParams);
 
   var Translation = $resource('/scenes/:sceneId/translations');
   var Scene = $resource('/scenes/:sceneId');
