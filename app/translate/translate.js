@@ -8,14 +8,14 @@
 angular.module('translateam.translate', ['ngRoute'])
 
   .config(['$routeProvider', function($routeProvider) {
-    $routeProvider.when('/translate', {
+    $routeProvider.when('/translate/:sceneId', {
       templateUrl: 'translate/translate.html',
       controller: 'translateCtrl',
       controllerAs: 'TransCtrl'
     });
   }])
 
-  .controller('translateCtrl', ['$resource', '$location', function($resource, $location) {
+  .controller('translateCtrl', ['$resource', '$location', '$routeParams', 'translateService', function($resource, $location, $routeParams, translateService) {
     var self = this;
     var Scene = $resource('/scenes/:sceneId');
     var Transcription = $resource('/scenes/:sceneId/transcripts');
@@ -29,24 +29,32 @@ angular.module('translateam.translate', ['ngRoute'])
       });
    // self.translations = null;
     // Get the current scene ID from the URL
-    var sceneId = $location.search().scene || 1;
+    var sceneId = $routeParams.sceneId;
 
     // Get the current scene in order to grab the video URL
     Scene.get({sceneId: sceneId}).$promise.then(function(scene) {
       if(scene) {
         self.scene = scene;
         self.videoUrl = scene.videoUrl
-        console.log(self.videoUrl)
       }
     })
     Transcription.query({sceneId: sceneId}).$promise.then(function(transcriptions) {
-    self.transcripts =transcriptions;
-      console.log( self.transcripts);
-  })
+      self.transcripts =transcriptions;
+    })
     Translation.query({sceneId: sceneId}).$promise.then(function(translations) {
        self.translations = translations;
-        console.log(self.translations);
     })
+
+    self.autoTranslate = function() {
+      var selection = window.getSelection().toString();
+      if(!selection.length) {
+        alert('You must select some text in the transcription to auto-translate.');
+      } else if(self.translations.length) {
+        translateService(selection).then(function(translation) {
+          self.translations[0].text += translation;
+        });
+      }
+    }
 
     Comments.query({sceneId: sceneId}).$promise.then(function(comments) {
       self.comments = comments;
@@ -55,8 +63,6 @@ angular.module('translateam.translate', ['ngRoute'])
     })
 
     self.saveAndClose = function(translationValue) {
-      console.log("in function")
-      console.log(self.translations);
       if(self.translations.length > 0){
         self.translations =self.translations[0];
         var translationId  = self.translations.id;

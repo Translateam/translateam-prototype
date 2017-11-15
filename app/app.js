@@ -6,13 +6,15 @@ angular.module('translateam', [
   'ngResource',
   'ncy-angular-breadcrumb',
   'ui.router',
+  'translateam.translateService',
   'translateam.view1',
   'translateam.view2',
   'translateam.subtitle',
   'translateam.translate',
   'translateam.version',
   'translateam.video-player',
-  'translateam.help-dialog'
+  'translateam.help-dialog',
+  'translateam.breadcrumbs'
 ]).
 config(['$locationProvider', '$routeProvider', '$stateProvider', '$breadcrumbProvider', function($locationProvider, $routeProvider, $stateProvider,$breadcrumbProvider) {
   $locationProvider.hashPrefix('!');
