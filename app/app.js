@@ -13,7 +13,8 @@ angular.module('translateam', [
   'translateam.translate',
   'translateam.version',
   'translateam.video-player',
-  'translateam.help-dialog'
+  'translateam.help-dialog',
+  'translateam.breadcrumbs'
 ]).
 config(['$locationProvider', '$routeProvider', '$stateProvider', '$breadcrumbProvider', function($locationProvider, $routeProvider, $stateProvider,$breadcrumbProvider) {
   $locationProvider.hashPrefix('!');

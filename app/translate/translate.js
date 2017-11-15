@@ -8,14 +8,14 @@
 angular.module('translateam.translate', ['ngRoute'])
 
   .config(['$routeProvider', function($routeProvider) {
-    $routeProvider.when('/translate', {
+    $routeProvider.when('/translate/:sceneId', {
       templateUrl: 'translate/translate.html',
       controller: 'translateCtrl',
       controllerAs: 'TransCtrl'
     });
   }])
 
-  .controller('translateCtrl', ['$resource', '$location', 'translateService', function($resource, $location, translateService) {
+  .controller('translateCtrl', ['$resource', '$location', '$routeParams', 'translateService', function($resource, $location, $routeParams, translateService) {
     var self = this;
     var Scene = $resource('/scenes/:sceneId');
     var Transcription = $resource('/scenes/:sceneId/transcripts');
@@ -28,7 +28,7 @@ angular.module('translateam.translate', ['ngRoute'])
       });
    // self.translations = null;
     // Get the current scene ID from the URL
-    var sceneId = $location.search().scene || 4;
+    var sceneId = $routeParams.sceneId;
 
     // Get the current scene in order to grab the video URL
     Scene.get({sceneId: sceneId}).$promise.then(function(scene) {
