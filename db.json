@@ -117,5 +117,35 @@
       ],
       "id": 1
     }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "sceneId": 1,
+      "projectId": 1,
+      "username": "Yash",
+      "commentText": "Some comment about the video"
+    },
+    {
+      "id": 1,
+      "sceneId": 1,
+      "projectId": 1,
+      "username": "Evan",
+      "commentText": "Some other comment about the video"
+    },
+    {
+      "id": 1,
+      "sceneId": 1,
+      "projectId": 1,
+      "username": "Rohit",
+      "commentText": "Something about the video"
+    },
+    {
+      "id": 1,
+      "sceneId": 1,
+      "projectId": 1,
+      "username": "Disha",
+      "commentText": "Some other thing about the video"
+    }
   ]
 }
