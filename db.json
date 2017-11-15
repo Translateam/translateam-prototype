@@ -55,24 +55,49 @@
   ],
   "translations": [
     {
-      "id": 1,
-      "text": "Pikachu, I choose you\nSomething else",
-      "sceneId": 1
-    },
-    {
-      "id": 2,
-      "text": "Pikachu, I choose you",
-      "sceneId": 2
-    },
-    {
       "id": 3,
-      "text": "Pikachu, I choose you",
       "sceneId": 3
     },
     {
       "id": 4,
-      "text": "Pikachu, I choose you",
-      "sceneId": 4
+      "sceneId": 4,
+      "text": "abcdefg"
+    },
+    {
+      "id": 5
+    },
+    {
+      "0": {
+        "text": "test test",
+        "sceneId": 2,
+        "id": 2
+      },
+      "id": 2
+    },
+    {
+      "id": 6,
+      "sceneId": 1
+    },
+    {
+      "id": 7,
+      "sceneId": 2
+    },
+    {
+      "id": 8,
+      "sceneId": 1
+    },
+    {
+      "sceneId": 1,
+      "text": "hello",
+      "id": 9
+    },
+    {
+      "sceneId": 3,
+      "id": 10
+    },
+    {
+      "sceneId": 4,
+      "id": 11
     }
   ],
   "subtitles": [
