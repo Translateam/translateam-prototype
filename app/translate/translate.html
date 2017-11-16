@@ -2,7 +2,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-5 vl">
-      <video-player video-url="{{TransCtrl.videoUrl}}" video-current-time="SubCtrl.videoCurrentTime"></video-player>
+      <video-player video-url="{{TransCtrl.videoUrl}}" video-current-time="TransCtrl.videoCurrentTime"></video-player>
     </div>
     <div class="col-md-7">
 
@@ -16,7 +16,7 @@
         <tbody>
         <tr style="text-align: center">
           <td>{{TransCtrl.transcripts[0].text}}</td>
-          <td><textarea style="width:100%" ng-model="TransCtrl.translations[0].text" id="textbox1" rows="8">{{TransCtrl.translations[0].text}}</textarea></td>
+          <td><textarea ng-model="TransCtrl.trans" style="width:100%" id="textbox1" rows="8">{{TransCtrl.translations[0].text}}</textarea></td>
         </tr>
 
         </tbody>
@@ -24,9 +24,42 @@
       <button type="button" class="btn btn-light" title="Auto-translate" ng-click="TransCtrl.autoTranslate()"><i class="fa fa-globe"></i></button>
       <button type="button" class="btn btn-light" title="Leave a comment"><i class="fa fa-comment"></i></button>
       <button type="button" class="btn btn-light" title="Open glossary"><i class="fa fa-book"></i></button>
-      <button type="button" class="btn btn-primary pull-right" ng-click="TransCtrl.saveAndClose(TransCtrl.translations[0].text)">Save & Close</button>
+      <button type="button" class="btn btn-primary pull-right"
+              ng-click="TransCtrl.saveAndClose(TransCtrl.trans)">Save & Close
+      </button>
     </div>
+    <!--<Comments scene-id="TransCtrl.sceneId"></Comments>-->
   </div>
-  <hr />
-  <Comments scene-id="TransCtrl.sceneId"></Comments>
-</div>
+  <br><br>
+  <div class="row">
+      <div class="col-md-12">
+        <h3>Comments</h3>
+        <br>
+      </div>
+
+
+    </div>
+
+  <div class="row">
+    <div class="col-md-1" style="text-align: center"><span  style="text-align: center"><i class="fa fa-3x fa-user-circle pull-right"></i></span></div>
+    <div class="col-md-8">
+      <textarea ng-model="TransCtrl.com" class="form-control" style="min-width: 60%"></textarea>
+    </div>
+    <div class="col-md-2" style="text-align: center;vertical-align: middle">
+      <button type="button" class="btn btn-primary pull-right" ng-click="TransCtrl.addComments(TransCtrl.com)">Add Comments
+    </button> </div>
+
+  </div>
+  <br>  <br>
+      <div class="row" ng-repeat="comment in TransCtrl.comments[0].comments">
+        <div class="col-md-1" style="text-align: center"><span  style="text-align: center"><i class="fa fa-3x fa-user-circle pull-right"></i></span></div>
+        <div class="col-md-10">
+          <textarea class="form-control" disabled style="min-width: 80%"> {{comment.text}}</textarea>
+          <br>
+          </div>
+      </div>
+
+
+
+
+  </div>
