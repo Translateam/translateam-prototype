@@ -14,8 +14,6 @@ angular.module('translateam.transcribe', ['ngRoute'])
     var self = this;
     var Scene = $resource('/scenes/:sceneId');
     var Transcription = $resource('/scenes/:sceneId/transcripts');
-    var Comments = $resource('/scenes/:sceneId/comments');
-    self.commentAreaText = '';
 
     var TranscriptionUpdate = $resource('http://localhost:3000/transcripts/:resId',
       null,
@@ -24,10 +22,9 @@ angular.module('translateam.transcribe', ['ngRoute'])
         save: {method: 'POST'}
       });
 
-    var CommentAdd = $resource('http://localhost:3000/comments');
-
     // Get the current scene ID from the URL
     var sceneId = $routeParams.sceneId;
+    self.sceneId = sceneId;
 
     // Get the current scene in order to grab the video URL
     Scene.get({sceneId: sceneId}).$promise.then(function(scene) {
@@ -38,10 +35,6 @@ angular.module('translateam.transcribe', ['ngRoute'])
     })
     Transcription.query({sceneId: sceneId}).$promise.then(function(transcriptions) {
       self.transcripts =transcriptions;
-    })
-    self.comments = [];
-    Comments.query({sceneId: sceneId}).$promise.then(function(comments) {
-      self.comments = comments;
     })
 
     self.saveAndClose = function(transcriptionValue) {
@@ -61,19 +54,5 @@ angular.module('translateam.transcribe', ['ngRoute'])
         $location.url("/view1");
       }
     };
-
-    self.addComment = function(commentValue){
-      if (commentValue.length) {
-        var newComment = new CommentAdd();
-        newComment.sceneId = sceneId;
-        newComment.username = "Test User";
-        newComment.commentText = commentValue;
-        newComment.$save();
-        self.comments.push(newComment);
-        self.commentTextArea = '';
-      }
-    };
-
-
 
   }]);

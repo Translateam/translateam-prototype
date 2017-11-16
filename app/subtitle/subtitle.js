@@ -28,6 +28,7 @@ angular.module('translateam.subtitle', ['ngRoute'])
 
   // Get the current scene ID from the URL
   var sceneId = $routeParams.sceneId;
+  self.sceneId = sceneId;
 
   // Get the current scene in order to grab the video URL
   Scene.get({sceneId: sceneId}).$promise.then(function(scene) {
