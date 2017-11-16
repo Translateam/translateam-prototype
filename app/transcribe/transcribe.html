@@ -32,29 +32,33 @@
 </div>
 
     <div class="detailBox">
-        <div class="titleBox" style="background-color:#fdfdfd;padding:10px;">
-            <label>Comments</label>
-        </div>
+      <hr/>
+      <h2>Comments</h2>
 
         <div class="actionBox">
             <ul class="commentList" style="padding:0;list-style:none">
                 <li ng-repeat="comment in ScribeCtrl.comments">
-                    <div class="commenterImage">
-                        <img src="http://placekitten.com/50/50" />
-                        <p>{{comment.username}}</p>
+                  <div class="row">
+                    <div class="col-md-1">
+                      <div class="commenterImage">
+                          <img src="http://placekitten.com/51/51" />
+                          <p><strong>{{comment.username}}</strong></p>
+                      </div>
                     </div>
-                    <div class="commentText">
-                        <p>{{comment.commentText}}</p> <span class="date sub-text" style="color:#aaa;font-family:verdana;font-size:11px;">on March 5th, 2014</span>
-
+                    <div class="col-md-11">
+                      <div class="commentText">
+                          <p>{{comment.commentText}}</p> <span class="date sub-text" style="color:#aaa;font-family:verdana;font-size:11px;">on March 5th, 2014</span>
+                      </div>
                     </div>
+                  </div>
                 </li>
             </ul>
             <form class="form-inline" role="form">
-                <div class="form-group">
-                    <input class="form-control" ng-model="ScribeCtrl.comment" type="text" placeholder="Your comments" />
+                <div class="form-group" style="margin-right:5px;">
+                    <textarea class="form-control" ng-model="ScribeCtrl.commentTextArea" placeholder="Your comments"></textarea>
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-default" ng-click="ScribeCtrl.addComment(ScribeCtrl.comment)">Add</button>
+                    <button class="btn btn-default" ng-click="ScribeCtrl.addComment(ScribeCtrl.commentTextArea)">Add</button>
                 </div>
             </form>
         </div>

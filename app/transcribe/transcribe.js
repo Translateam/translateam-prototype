@@ -15,6 +15,7 @@ angular.module('translateam.transcribe', ['ngRoute'])
     var Scene = $resource('/scenes/:sceneId');
     var Transcription = $resource('/scenes/:sceneId/transcripts');
     var Comments = $resource('/scenes/:sceneId/comments');
+    self.commentAreaText = '';
 
     var TranscriptionUpdate = $resource('http://localhost:3000/transcripts/:resId',
       null,
@@ -23,11 +24,7 @@ angular.module('translateam.transcribe', ['ngRoute'])
         save: {method: 'POST'}
       });
 
-    var CommentAdd = $resource('http://localhost:3000/comments/:resId',
-        null,
-        {
-          save: {method: 'POST'}
-        });
+    var CommentAdd = $resource('http://localhost:3000/comments');
 
     // Get the current scene ID from the URL
     var sceneId = $routeParams.sceneId;
@@ -66,13 +63,15 @@ angular.module('translateam.transcribe', ['ngRoute'])
     };
 
     self.addComment = function(commentValue){
-      self.comments.sceneId = sceneId;
-      var currentdate = new Date();
-      var commentId  = currentdate.getTime();
-      self.comments.text  = commentValue;
-      CommentAdd.save(self.comments);
-      $location.url("/view1");
-
+      if (commentValue.length) {
+        var newComment = new CommentAdd();
+        newComment.sceneId = sceneId;
+        newComment.username = "Test User";
+        newComment.commentText = commentValue;
+        newComment.$save();
+        self.comments.push(newComment);
+        self.commentTextArea = '';
+      }
     };
 
 
