@@ -1,0 +1,34 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+        <video-player video-url="{{ScribeCtrl.videoUrl}}" video-current-time="SubCtrl.videoCurrentTime"></video-player>
+        </div>
+
+        <div style="border-left: 2px;color:black;height: 100px;position:absolute;left: 50%;margin-left: -3px;top: 0;"></div>
+
+        <div class="col-sm-6">
+        <div class="container-fluid" style="position: relative">
+    <form>
+        <div class="form-group">
+            <label for="transcription">Enter Transcription</label>
+            <textarea class="form-control" rows="5" id="transcription" ng-model="ScribeCtrl.transcripts[0].text">{{ScribeCtrl.transcripts[0].text}}</textarea>
+        </div>
+        <p>
+            <a href>
+                <span class="glyphicon glyphicon-comment" style="color: black;font-size: 40px">
+                </span>
+            </a>
+            <a href>
+                <span class="glyphicon glyphicon-book" style="color: black;font-size: 40px">
+                </span>
+            </a>
+            <button type="submit" class="btn btn-primary pull-right" ng-click="ScribeCtrl.saveAndClose(ScribeCtrl.transcripts[0].text)">Save and Close</button>
+        </p>
+
+    </form>
+</div>
+</div>
+</div>
+<hr/>
+<Comments scene-id="ScribeCtrl.sceneId"></Comments>

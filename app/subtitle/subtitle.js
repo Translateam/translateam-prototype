@@ -3,14 +3,14 @@
 angular.module('translateam.subtitle', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/subtitle', {
+  $routeProvider.when('/subtitle/:sceneId', {
     templateUrl: 'subtitle/subtitle.html',
     controller: 'SubtitleCtrl',
     controllerAs: 'SubCtrl'
   });
 }])
 
-.controller('SubtitleCtrl', ['$resource', '$location', function($resource, $location, $routeParams) {
+.controller('SubtitleCtrl', ['$resource', '$routeParams', function($resource, $routeParams) {
   var self = this;
 
   console.log($routeParams);
@@ -29,7 +29,8 @@ angular.module('translateam.subtitle', ['ngRoute'])
   self.videoUrl = ''
 
   // Get the current scene ID from the URL
-  var sceneId = $location.search().scene || 1;
+  var sceneId = $routeParams.sceneId;
+  self.sceneId = sceneId;
 
   // Get the current scene in order to grab the video URL
   Scene.get({sceneId: sceneId}).$promise.then(function(scene) {

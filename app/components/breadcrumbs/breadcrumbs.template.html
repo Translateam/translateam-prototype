@@ -1,0 +1,12 @@
+<nav aria-label="breadcrumb" role="navigation">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item" aria-current="page">Projects</li>
+    <li class="breadcrumb-item" aria-current="page" ng-if="sceneNumber() == true" ng-click="returnToProjectPage()">
+      <a href="#">Pokemon Episode 8</a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page" ng-if="sceneNumber() === undefined">
+      Pokemon Episode 8
+    </li>
+    <li class="breadcrumb-item active" aria-current="page" ng-if="sceneNumber() == true">Scene {{sceneNumber()}} - {{sceneType()}}</li>
+  </ol>
+</nav>
