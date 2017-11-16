@@ -27,6 +27,12 @@ angular.module('translateam.translate', ['ngRoute'])
         update: {method: 'PUT'},
         save: {method: 'POST'}
       });
+     var CommentUpdate = $resource('http://localhost:3000/comments/:commentId',
+      null,
+      {
+        update: {method: 'PUT'},
+        save: {method: 'POST'}
+      });
    // self.translations = null;
     // Get the current scene ID from the URL
     var sceneId = $routeParams.sceneId;
@@ -43,6 +49,9 @@ angular.module('translateam.translate', ['ngRoute'])
     })
     Translation.query({sceneId: sceneId}).$promise.then(function(translations) {
        self.translations = translations;
+      self.trans = self.translations[0].text;
+      console.log("translations");
+      console.log(self.translations);
     })
 
     self.autoTranslate = function() {
@@ -62,12 +71,37 @@ angular.module('translateam.translate', ['ngRoute'])
       console.log(self.comments);
     })
 
+    self.addComments = function(newComment) {
+     if(newComment != ""){
+       if(self.comments.length > 0){
+         var commentObj = {"text":newComment};
+         self.comments[0].comments.push(commentObj);
+         var comId =  self.comments[0].id;
+         CommentUpdate.update({commentId : comId}, self.comments[0]);
+       }else{
+         self.comments = {};
+         self.comments.sceneId = sceneId;
+         var currentdate = new Date();
+         var comId  = currentdate.getTime();
+         var commentObj = {"text":newComment};
+         self.comments.comments = [commentObj];
+         CommentUpdate.save(self.comments);
+
+       }
+       self.com = null;
+
+
+
+     }
+    };
+
+
     self.saveAndClose = function(translationValue) {
       if(self.translations.length > 0){
-        self.translations =self.translations[0];
-        var translationId  = self.translations.id;
-        self.translations.text  = translationValue;
-        TranslationUpdate.update({resId : translationId}, self.translations);
+      //  self.translations =self.translations[0];
+        var translationId  = self.translations[0].id;
+        self.trans = self.translations[0].text  = translationValue;
+        TranslationUpdate.update({resId : translationId}, self.translations[0]);
         $location.url("/view1");
       }else{
         self.translations = {};
