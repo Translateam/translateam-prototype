@@ -23,7 +23,6 @@
   content: "|";
   padding-right: 0.3em;
 }
-
 /** CSS for the Project Page **/
 
 /*
@@ -65,4 +64,8 @@ For trial to be removed n future
 .multiDemo ul[dnd-list] li.selected {
   background-color: #dff0d8;
   color: #3c763d;
+}
+.vl {
+  border-right: 6px solid black;
+
 }

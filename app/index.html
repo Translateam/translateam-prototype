@@ -18,10 +18,12 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.4.0/wavesurfer.min.js"></script>
 </head>
 <body>
+<div ng-include="'header.html'"></div>
   <ul class="menu">
     <li><a href="#!/view1">view1</a></li>
-    <li><a href="#!/view2">view2</a></li>
+    <li><a href="#!/viewElement">view2</a></li>
     <li><a href="#!/subtitle">subtitle</a></li>
+    <li><a href="#!/translate">translate</a></li>
   </ul>
 
   <!--[if lt IE 7]>
@@ -30,7 +32,7 @@
 
   <div ng-view></div>
 
-  <div>Angular seed app: v<span app-version></span></div>
+  <!--<div>Angular seed app: v<span app-version></span></div>-->
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
@@ -38,6 +40,8 @@
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+  <script data-require="angular-breadcrumb@0.4.1" data-semver="0.4.1" src="https://rawgithub.com/ncuillery/angular-breadcrumb/master/release/angular-breadcrumb.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
@@ -45,11 +49,16 @@
   <script src="view1/view1.js"></script>
   <script src="view2/view2.js"></script>
   <script src="subtitle/subtitle.js"></script>
-  <script src = "project/project.js"></script>
+  <script src ="project/project.js"></script>
+  <script src="translate/translate.js"></script>
+  <script src="transcribe/transcribe.js"></script>
+  <script src="services/translate.service.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
   <script src="components/video-player/video-player.component.js"></script>
+  <script src="components/comments/comments.component.js"></script>
   <script src="components/help-dialog/help-dialog.component.js"></script>
+  <script src="components/breadcrumbs/breadcrumbs.component.js"></script>
 </body>
 </html>
