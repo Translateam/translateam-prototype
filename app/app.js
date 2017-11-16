@@ -11,6 +11,7 @@ angular.module('translateam', [
   'translateam.view2',
   'translateam.subtitle',
   'translateam.translate',
+  'translateam.transcribe',
   'translateam.version',
   'translateam.video-player',
   'translateam.help-dialog',

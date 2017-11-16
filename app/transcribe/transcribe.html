@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-6">
-        <video-player video-url="{{ScribeCtrl.videoUrl}}" video-current-time="SubCtrl.videoCurrentTime"></video-player>        
+        <video-player video-url="{{ScribeCtrl.videoUrl}}" video-current-time="SubCtrl.videoCurrentTime"></video-player>
         </div>
 
         <div style="border-left: 2px;color:black;height: 100px;position:absolute;left: 50%;margin-left: -3px;top: 0;"></div>
@@ -12,7 +12,7 @@
     <form>
         <div class="form-group">
             <label for="transcription">Enter Transcription</label>
-            <textarea class="form-control" rows="5" id="transcription" ng-model="ScribeCtrl.transcriptions[0].text">{{ScribeCtrl.transcriptions[0].text}}</textarea>
+            <textarea class="form-control" rows="5" id="transcription" ng-model="ScribeCtrl.transcripts[0].text">{{ScribeCtrl.transcripts[0].text}}</textarea>
         </div>
         <p>
             <a href>
@@ -23,7 +23,7 @@
                 <span class="glyphicon glyphicon-book" style="color: black;font-size: 40px">
                 </span>
             </a>
-            <button type="submit" class="btn btn-default pull-right" ng-click="ScribeCtrl.saveAndClose(ScribeCtrl.transcriptions[0].text)">Save and Close</button>
+            <button type="submit" class="btn btn-default pull-right" ng-click="ScribeCtrl.saveAndClose(ScribeCtrl.transcripts[0].text)">Save and Close</button>
         </p>
 
     </form>
@@ -37,7 +37,7 @@
         </div>
 
         <div class="actionBox">
-            <ul class="commentList" style="padding:0;list-style:none;max-height:200px;overflow:auto;">
+            <ul class="commentList" style="padding:0;list-style:none">
                 <li ng-repeat="comment in ScribeCtrl.comments">
                     <div class="commenterImage">
                         <img src="http://placekitten.com/50/50" />

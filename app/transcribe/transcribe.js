@@ -14,9 +14,9 @@ angular.module('translateam.transcribe', ['ngRoute'])
     var self = this;
     var Scene = $resource('/scenes/:sceneId');
     var Transcription = $resource('/scenes/:sceneId/transcripts');
-    var comments = $resource('/scenes/:sceneId/comments');
-    self.comments = comments;
-    var TranscriptionUpdate = $resource('http://localhost:3000/transcriptions/:resId',
+    var Comments = $resource('/scenes/:sceneId/comments');
+
+    var TranscriptionUpdate = $resource('http://localhost:3000/transcripts/:resId',
       null,
       {
         update: {method: 'PUT'},
@@ -41,6 +41,10 @@ angular.module('translateam.transcribe', ['ngRoute'])
     })
     Transcription.query({sceneId: sceneId}).$promise.then(function(transcriptions) {
       self.transcripts =transcriptions;
+    })
+    self.comments = [];
+    Comments.query({sceneId: sceneId}).$promise.then(function(comments) {
+      self.comments = comments;
     })
 
     self.saveAndClose = function(transcriptionValue) {
