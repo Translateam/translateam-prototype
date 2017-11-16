@@ -8,82 +8,159 @@
       <p>Todo</p>
     </help-dialog>
   </div>
-  <!-- <div class="row">
-    <div class="card" data-drop="true" data-jqyoui-options ng-model="list2" jqyoui-droppable style='height:50px;'>
-      <div class="card-body">
-        <div class="card" data-drag="true" data-jqyoui-options="{revert: 'invalid', axis: 'y'}" jqyoui-draggable="{animate:true}" style="z-index:9001;">
-          <div class="card-body">
-            Woot
-          </div>
+  <div class="row" style="border-bottom:solid;">
+    <div class="col-md-2"><h3>Todo</h3></div>
+    <div class="col-md-2" style="min-height:100px;" data-drop="true" jqyoui-droppable="{multiple:true}" ng-model="scene1todo">
+      <div ng-repeat="item in scene1todo" class="card" data-drag="true" data-jqyoui-options="{revert: 'invalid', axis: 'y'}" jqyoui-draggable="{index: {{$index}}, animate:true}" style="z-index:9001;" ng-model="scene1todo">
+        <div class="card-body" ng-dblclick="goToScene(item)" >
+          {{item.title}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2" style="min-height:100px;" data-drop="true" jqyoui-droppable="{multiple:true}" ng-model="scene2todo">
+      <div ng-repeat="item in scene2todo" class="card" data-drag="true" data-jqyoui-options="{revert: 'invalid', axis: 'y'}" jqyoui-draggable="{index: {{$index}}, animate:true}" style="z-index:9001;" ng-model="scene2todo">
+        <div class="card-body" ng-dblclick="goToScene(item)" >
+          {{item.title}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2" style="min-height:100px;" data-drop="true" jqyoui-droppable="{multiple:true}" ng-model="scene3todo">
+      <div ng-repeat="item in scene3todo" class="card" data-drag="true" data-jqyoui-options="{revert: 'invalid', axis: 'y'}" jqyoui-draggable="{index: {{$index}}, animate:true}" style="z-index:9001;" ng-model="scene3todo">
+        <div class="card-body" ng-dblclick="goToScene(item)" >
+          {{item.title}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2" style="min-height:100px;" data-drop="true" jqyoui-droppable="{multiple:true}" ng-model="scene4todo">
+      <div ng-repeat="item in scene4todo" class="card" data-drag="true" data-jqyoui-options="{revert: 'invalid', axis: 'y'}" jqyoui-draggable="{index: {{$index}}, animate:true}" style="z-index:9001;" ng-model="scene4todo">
+        <div class="card-body" ng-dblclick="goToScene(item)" >
+          {{item.title}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="border-bottom:solid;">
+    <div class="col-md-2"><h3>Transcribe</h3></div>
+    <div class="col-md-2" style="min-height:100px;" data-drop="true" jqyoui-droppable="{multiple:true}" ng-model="scene1transcribe">
+      <div ng-repeat="item in scene1transcribe" class="card" data-drag="true" data-jqyoui-options="{revert: 'invalid', axis: 'y'}" jqyoui-draggable="{index: {{$index}}, animate:true}" style="z-index:9001;" ng-model="scene1transcribe">
+        <div class="card-body" ng-dblclick="goToScene(item)" >
+          {{item.title}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2" style="min-height:100px;" data-drop="true" jqyoui-droppable="{multiple:true}" ng-model="scene2transcribe">
+      <div ng-repeat="item in scene2transcribe" class="card" data-drag="true" data-jqyoui-options="{revert: 'invalid', axis: 'y'}" jqyoui-draggable="{index: {{$index}}, animate:true}" style="z-index:9001;" ng-model="scene2transcribe">
+        <div class="card-body" ng-dblclick="goToScene(item)" >
+          {{item.title}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2" style="min-height:100px;" data-drop="true" jqyoui-droppable="{multiple:true}" ng-model="scene3transcribe">
+      <div ng-repeat="item in scene3transcribe" class="card" data-drag="true" data-jqyoui-options="{revert: 'invalid', axis: 'y'}" jqyoui-draggable="{index: {{$index}}, animate:true}" style="z-index:9001;" ng-model="scene3transcribe">
+        <div class="card-body" ng-dblclick="goToScene(item)" >
+          {{item.title}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2" style="min-height:100px;" data-drop="true" jqyoui-droppable="{multiple:true}" ng-model="scene4transcribe">
+      <div ng-repeat="item in scene4transcribe" class="card" data-drag="true" data-jqyoui-options="{revert: 'invalid', axis: 'y'}" jqyoui-draggable="{index: {{$index}}, animate:true}" style="z-index:9001;" ng-model="scene4transcribe">
+        <div class="card-body" ng-dblclick="goToScene(item)" >
+          {{item.title}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="border-bottom:solid;">
+    <div class="col-md-2"><h3>Translate</h3></div>
+    <div class="col-md-2" style="min-height:100px;" data-drop="true" jqyoui-droppable="{multiple:true}" ng-model="scene1translate">
+      <div ng-repeat="item in scene1translate" class="card" data-drag="true" data-jqyoui-options="{revert: 'invalid', axis: 'y'}" jqyoui-draggable="{index: {{$index}}, animate:true}" style="z-index:9001;" ng-model="scene1translate">
+        <div class="card-body" ng-dblclick="goToScene(item)" >
+          {{item.title}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2" style="min-height:100px;" data-drop="true" jqyoui-droppable="{multiple:true}" ng-model="scene2translate">
+      <div ng-repeat="item in scene2translate" class="card" data-drag="true" data-jqyoui-options="{revert: 'invalid', axis: 'y'}" jqyoui-draggable="{index: {{$index}}, animate:true}" style="z-index:9001;" ng-model="scene2translate">
+        <div class="card-body" ng-dblclick="goToScene(item)" >
+          {{item.title}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2" style="min-height:100px;" data-drop="true" jqyoui-droppable="{multiple:true}" ng-model="scene3translate">
+      <div ng-repeat="item in scene3translate" class="card" data-drag="true" data-jqyoui-options="{revert: 'invalid', axis: 'y'}" jqyoui-draggable="{index: {{$index}}, animate:true}" style="z-index:9001;" ng-model="scene3translate">
+        <div class="card-body" ng-dblclick="goToScene(item)" >
+          {{item.title}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2" style="min-height:100px;" data-drop="true" jqyoui-droppable="{multiple:true}" ng-model="scene4translate">
+      <div ng-repeat="item in scene4translate" class="card" data-drag="true" data-jqyoui-options="{revert: 'invalid', axis: 'y'}" jqyoui-draggable="{index: {{$index}}, animate:true}" style="z-index:9001;" ng-model="scene4translate">
+        <div class="card-body" ng-dblclick="goToScene(item)" >
+          {{item.title}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="border-bottom:solid;">
+    <div class="col-md-2"><h3>Subtitle</h3></div>
+    <div class="col-md-2" style="min-height:100px;" data-drop="true" jqyoui-droppable="{multiple:true}" ng-model="scene1subtitle">
+      <div ng-repeat="item in scene1subtitle" class="card" data-drag="true" data-jqyoui-options="{revert: 'invalid', axis: 'y'}" jqyoui-draggable="{index: {{$index}}, animate:true}" style="z-index:9001;" ng-model="scene1subtitle">
+        <div class="card-body" ng-dblclick="goToScene(item)" >
+          {{item.title}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2" style="min-height:100px;" data-drop="true" jqyoui-droppable="{multiple:true}" ng-model="scene2subtitle">
+      <div ng-repeat="item in scene2subtitle" class="card" data-drag="true" data-jqyoui-options="{revert: 'invalid', axis: 'y'}" jqyoui-draggable="{index: {{$index}}, animate:true}" style="z-index:9001;" ng-model="scene2subtitle">
+        <div class="card-body" ng-dblclick="goToScene(item)" >
+          {{item.title}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2" style="min-height:100px;" data-drop="true" jqyoui-droppable="{multiple:true}" ng-model="scene3subtitle">
+      <div ng-repeat="item in scene3subtitle" class="card" data-drag="true" data-jqyoui-options="{revert: 'invalid', axis: 'y'}" jqyoui-draggable="{index: {{$index}}, animate:true}" style="z-index:9001;" ng-model="scene3subtitle">
+        <div class="card-body" ng-dblclick="goToScene(item)" >
+          {{item.title}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2" style="min-height:100px;" data-drop="true" jqyoui-droppable="{multiple:true}" ng-model="scene4subtitle">
+      <div ng-repeat="item in scene4subtitle" class="card" data-drag="true" data-jqyoui-options="{revert: 'invalid', axis: 'y'}" jqyoui-draggable="{index: {{$index}}, animate:true}" style="z-index:9001;" ng-model="scene4subtitle">
+        <div class="card-body" ng-dblclick="goToScene(item)" >
+          {{item.title}}
         </div>
       </div>
     </div>
   </div>
   <div class="row">
-    <div class="card" data-drop="true" data-jqyoui-options ng-model="list2" jqyoui-droppable style="height:50px; width:100px;">
-      <div class="card-body"></div>
-    </div>
-  </div> -->
-  {{scene1Todo}}
-  {{scene1Transcribe}}
-  <div class="row" style="border-bottom:solid;">
-    <div class="col-md-3"><h3>Todo</h3></div>
-    <div class="col-md-3" style="min-height:100px;" data-drop="true" jqyoui-droppable="{multiple:true}" ng-model="scene1Todo">
-      <div ng-repeat="item in scene1Todo" class="card" data-drag="true" data-jqyoui-options="{revert: 'invalid', axis: 'y'}" jqyoui-draggable="{index: {{$index}}, animate:true}" style="z-index:9001;" ng-model="scene1Todo">
-        <div class="card-body">
+    <div class="col-md-2"><h3>Done</h3></div>
+    <div class="col-md-2" style="min-height:100px;" data-drop="true" jqyoui-droppable="{multiple:true}" ng-model="scene1done">
+      <div ng-repeat="item in scene1done" class="card" data-drag="true" data-jqyoui-options="{revert: 'invalid', axis: 'y'}" jqyoui-draggable="{index: {{$index}}, animate:true}" style="z-index:9001;" ng-model="scene1done">
+        <div class="card-body" ng-dblclick="goToScene(item)" >
           {{item.title}}
         </div>
       </div>
     </div>
-    <div class="col-md-3" style="min-height:100px;" data-drop="true" jqyoui-droppable></div>
-    <div class="col-md-3" style="min-height:100px;" data-drop="true" jqyoui-droppable></div>
-  </div>
-  <div class="row" style="border-bottom:solid;">
-    <div class="col-md-3"><h3>Transcribe</h3></div>
-    <div class="col-md-3" style="min-height:100px;" data-drop="true" jqyoui-droppable="{multiple:true}" ng-model="scene1Transcribe">
-      <div ng-repeat="item in scene1Transcribe" class="card" data-drag="true" data-jqyoui-options="{revert: 'invalid', axis: 'y'}" jqyoui-draggable="{index: {{$index}}, animate:true}" style="z-index:9001;" ng-model="scene1Transcribe">
-        <div class="card-body">
+    <div class="col-md-2" style="min-height:100px;" data-drop="true" jqyoui-droppable="{multiple:true}" ng-model="scene2done">
+      <div ng-repeat="item in scene2done" class="card" data-drag="true" data-jqyoui-options="{revert: 'invalid', axis: 'y'}" jqyoui-draggable="{index: {{$index}}, animate:true}" style="z-index:9001;" ng-model="scene2done">
+        <div class="card-body" ng-dblclick="goToScene(item)" >
           {{item.title}}
         </div>
       </div>
     </div>
-    <div class="col-md-3" style="min-height:100px;" data-drop="true" jqyoui-droppable></div>
-    <div class="col-md-3" style="min-height:100px;" data-drop="true" jqyoui-droppable></div>
-  </div>
-  <div class="row" style="border-bottom:solid;">
-    <div class="col-md-3"><h3>Translate</h3></div>
-    <div class="col-md-3" style="min-height:100px;" data-drop="true" jqyoui-droppable ng-model="scene1Translate">
-      <div ng-repeat="item in scene1Translate" class="card" data-drag="true" data-jqyoui-options="{revert: 'invalid', axis: 'y'}" jqyoui-draggable="{index: {{$index}}, animate:true}" style="z-index:9001;" ng-model="scene1Translate">
-        <div class="card-body">
+    <div class="col-md-2" style="min-height:100px;" data-drop="true" jqyoui-droppable="{multiple:true}" ng-model="scene3done">
+      <div ng-repeat="item in scene3done" class="card" data-drag="true" data-jqyoui-options="{revert: 'invalid', axis: 'y'}" jqyoui-draggable="{index: {{$index}}, animate:true}" style="z-index:9001;" ng-model="scene3done">
+        <div class="card-body" ng-dblclick="goToScene(item)" >
           {{item.title}}
         </div>
       </div>
     </div>
-    <div class="col-md-3" style="min-height:100px;" data-drop="true" jqyoui-droppable></div>
-    <div class="col-md-3" style="min-height:100px;" data-drop="true" jqyoui-droppable></div>
-  </div>
-  <div class="row" style="border-bottom:solid;">
-    <div class="col-md-3"><h3>Subtitle</h3></div>
-    <div class="col-md-3" style="min-height:100px;" data-drop="true" jqyoui-droppable ng-model="scene1Subtitle">
-      <div ng-repeat="item in scene1Subtitle" class="card" data-drag="true" data-jqyoui-options="{revert: 'invalid', axis: 'y'}" jqyoui-draggable="{index: {{$index}}, animate:true}" style="z-index:9001;" ng-model="scene1Subtitle">
-        <div class="card-body">
+    <div class="col-md-2" style="min-height:100px;" data-drop="true" jqyoui-droppable="{multiple:true}" ng-model="scene4done">
+      <div ng-repeat="item in scene4done" class="card" data-drag="true" data-jqyoui-options="{revert: 'invalid', axis: 'y'}" jqyoui-draggable="{index: {{$index}}, animate:true}" style="z-index:9001;" ng-model="scene4done">
+        <div class="card-body" ng-dblclick="goToScene(item)" >
           {{item.title}}
         </div>
       </div>
     </div>
-    <div class="col-md-3" style="min-height:100px;" data-drop="true" jqyoui-droppable></div>
-    <div class="col-md-3" style="min-height:100px;" data-drop="true" jqyoui-droppable></div>
-  </div>
-  <div class="row">
-    <div class="col-md-3"><h3>Done</h3></div>
-    <div class="col-md-3" style="min-height:100px;" data-drop="true" jqyoui-droppable ng-model="scene1Done">
-      <div ng-repeat="item in scene1Done" class="card" data-drag="true" data-jqyoui-options="{revert: 'invalid', axis: 'y'}" jqyoui-draggable="{index: {{$index}}, animate:true}" style="z-index:9001;" ng-model="scene1Done">
-        <div class="card-body">
-          {{item.title}}
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3" style="min-height:100px;" data-drop="true" jqyoui-droppable></div>
-    <div class="col-md-3" style="min-height:100px;" data-drop="true" jqyoui-droppable></div>
   </div>
 </div>

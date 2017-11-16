@@ -10,11 +10,88 @@ angular.module('translateam.project', ['ngRoute'])
 }])
 
 .controller('ProjectCtrl', ['$resource', '$location', '$scope', function($resource, $location, $scope) {
-  $scope.scene1Todo = [{title: 'Wowo'}];
-  $scope.scene1Transcribe = [];
-  $scope.scene1Translate = [];
-  $scope.scene1Subtitle = [];
-  $scope.scene1Done = [];
+  $scope.scene1todo = [];
+  $scope.scene1transcribe = [];
+  $scope.scene1translate = [];
+  $scope.scene1subtitle = [];
+  $scope.scene1done = [];
+
+  $scope.scene2todo = [];
+  $scope.scene2transcribe = [];
+  $scope.scene2translate = [];
+  $scope.scene2subtitle = [];
+  $scope.scene2done = [];
+
+  $scope.scene3todo = [];
+  $scope.scene3transcribe = [];
+  $scope.scene3translate = [];
+  $scope.scene3subtitle = [];
+  $scope.scene3done = [];
+
+  $scope.scene4todo = [];
+  $scope.scene4transcribe = [];
+  $scope.scene4translate = [];
+  $scope.scene4subtitle = [];
+  $scope.scene4done = [];
+
+  var self = this;
+  var Project = $resource('/projects/:projectId');
+  var Scenes = $resource('/scenes/:sceneId');
+  var ProjectScenes = $resource('http://localhost:3000/projects/:projectId/scenes');
+  var SceneStageUpdate = $resource('http://localhost:3000/scenes/:sceneId',
+    null,
+    {
+      update: {method: 'PUT'}
+    });
+
+  var projectId = 1;
+
+  Project.get({projectId: projectId}).$promise.then(function(project) {
+    if(project) {
+
+      // Should be code over here to pull scenes from the projects
+
+      // Scenes.get({sceneId: sceneId}).$promise.then(function())
+      console.log("List of scenes over here is");
+      console.log(project);
+      self.scenes = project.scenes;
+      console.log(self.scenes)
+    }
+  })
+
+  ProjectScenes.query({projectId: projectId}).$promise.then(function(scenes) {
+    for (var i = scenes.length - 1; i >= 0; i--) {
+      var scene = scenes[i];
+      var scopevarName = 'scene' + scene.id + scene.progress;
+      $scope[scopevarName].push(scene);
+    }
+  })
+
+  var progresses = ['todo', 'transcribe', 'translate', 'subtitle', 'done'];
+
+  for (var i = progresses.length - 1; i >= 0; i--) {
+    for(var j = 1; j <= 4; j++) {
+      (function() {
+      var prog = progresses[i];
+      var watchName = 'scene' + j + prog;
+      $scope.$watch(watchName, function(newValue, oldValue) {
+        if(newValue.length && !oldValue.length) {
+          var sceneToUpdate = newValue[0];
+          sceneToUpdate.progress = prog;
+          SceneStageUpdate.update({sceneId: sceneToUpdate.id}, sceneToUpdate);
+        }
+      }, true);
+    })();
+    }
+  }
+
+  $scope.goToScene = function(scene) {
+    if(scene.progress === 'transcribe' || scene.progress === 'translate' ||
+      scene.progress === 'subtitle') {
+      $location.path('/' + scene.progress + '/' + scene.id);
+    }
+  }
+
 
   // $scope.list1 = {title: 'AngularJS - Drag Me'};
   // $scope.list2 = {};
