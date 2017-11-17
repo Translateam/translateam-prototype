@@ -1,6 +1,6 @@
-<h2>Comments</h2>
 
-<div class="actionBox">
+<div class="actionBox container-fluid">
+  <h2>Comments</h2>
   <ul class="commentList" style="padding:0;list-style:none">
     <li ng-repeat="comment in comments">
       <div class="row">
@@ -19,12 +19,12 @@
       </div>
     </li>
   </ul>
-  <form class="form-inline" role="form">
-    <div class="form-group" style="margin-right:5px;">
+  <div class="row">
+    <div class="col-md-8">
       <textarea class="form-control" ng-model="commentTextArea" placeholder="Your comments"></textarea>
     </div>
-    <div class="form-group">
-      <button class="btn btn-default" ng-click="addComment(commentTextArea)">Add</button>
+    <div class="col-md-4">
+      <button class="btn btn-default" ng-click="addComment(commentTextArea)">Add Comment</button>
     </div>
-  </form>
+  </div>
 </div>
