@@ -10,10 +10,8 @@ angular.module('translateam.subtitle', ['ngRoute'])
   });
 }])
 
-.controller('SubtitleCtrl', ['$resource', '$routeParams', function($resource, $routeParams) {
+.controller('SubtitleCtrl', ['$resource', '$routeParams', '$location', function($resource, $routeParams, $location) {
   var self = this;
-
-  console.log($routeParams);
 
   var Translation = $resource('/scenes/:sceneId/translations');
   var Scene = $resource('/scenes/:sceneId');
@@ -98,6 +96,6 @@ angular.module('translateam.subtitle', ['ngRoute'])
    */
   self.saveAndClose = function() {
     SubtitleUpdate.update({subtitleId: self.subtitles.id}, self.subtitles);
-    // TODO return to the project page
+    $location.url("/project");
   };
 }]);

@@ -103,7 +103,7 @@ angular.module('translateam.translate', ['ngRoute'])
         var translationId  = self.translations[0].id;
         self.trans = self.translations[0].text  = translationValue;
         TranslationUpdate.update({resId : translationId}, self.translations[0]);
-        $location.url("/view1");
+        $location.url("/project");
       }else{
         self.translations = {};
         self.translations.sceneId = sceneId;
@@ -111,7 +111,7 @@ angular.module('translateam.translate', ['ngRoute'])
         var translationId  = currentdate.getTime();
         self.translations.text  = translationValue;
         TranslationUpdate.save(self.translations);
-        $location.url("/view1");
+        $location.url("/project");
       }
     };
   }]);

@@ -46,7 +46,7 @@ config(['$locationProvider', '$routeProvider', '$stateProvider', '$breadcrumbPro
 
   states.forEach($stateProvider.state);
 
-  $routeProvider.otherwise('/view1');
+  $routeProvider.otherwise('/project');
 
   $breadcrumbProvider.setOptions({
     template: '<ol class="breadcrumb" ng-init="routes = ' + JSON.stringify(states).replace(/"/g, "'") + '">' +
