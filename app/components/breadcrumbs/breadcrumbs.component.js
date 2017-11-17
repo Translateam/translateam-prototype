@@ -25,7 +25,7 @@ angular.module('translateam.breadcrumbs', [])
       };
 
       $scope.returnToProjectPage = function() {
-        $location.path('/view1');
+        $location.path('/project');
       }
     }
 }})
