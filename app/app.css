@@ -30,4 +30,5 @@
 
 .card {
   margin-top: 10px;
+  min-height: 83px;
 }
