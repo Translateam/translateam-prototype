@@ -61,7 +61,7 @@ angular.module('translateam.translate', ['ngRoute'])
         alert('You must select some text in the transcription to auto-translate.');
       } else if(self.translations.length) {
         translateService(selection).then(function(translation) {
-          self.translations[0].text += translation;
+          self.trans += translation;
         });
       }
     }
