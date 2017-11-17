@@ -10,7 +10,7 @@
       "id": 1,
       "title": "Scene 1",
       "videoUrl": "public/videos/video1.mp4",
-      "progress": "subtitle",
+      "progress": "todo",
       "projectId": 1
     },
     {

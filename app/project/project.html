@@ -5,12 +5,13 @@
       <p>Todo</p>
     </help-dialog>
   </div>
-  <div class="row" style="border-bottom:solid;">
-    <div class="col-md-2"><h3>Todo</h3></div>
+  <div class="row" style="border-bottom:solid 1px;">
+    <div class="col-md-2" style="display: flex; justify-content: center; align-items:center"><h3>Todo</h3></div>
     <div class="col-md-2" style="min-height:100px;" data-drop="true" jqyoui-droppable="{multiple:true}" ng-model="scene1todo">
       <div ng-repeat="item in scene1todo" class="card" data-drag="true" data-jqyoui-options="{revert: 'invalid', axis: 'y'}" jqyoui-draggable="{index: {{$index}}, animate:true}" style="z-index:9001;" ng-model="scene1todo">
         <div class="card-body" ng-dblclick="goToScene(item)" >
           {{item.title}}
+          <span class="pull-right"><i class="fa fa-user-circle"></i></span>
         </div>
       </div>
     </div>
@@ -36,12 +37,13 @@
       </div>
     </div>
   </div>
-  <div class="row" style="border-bottom:solid;">
-    <div class="col-md-2"><h3>Transcribe</h3></div>
+  <div class="row" style="border-bottom:solid 1px;">
+    <div class="col-md-2" style="display: flex; justify-content: center; align-items:center"><h3>Transcribe</h3></div>
     <div class="col-md-2" style="min-height:100px;" data-drop="true" jqyoui-droppable="{multiple:true}" ng-model="scene1transcribe">
       <div ng-repeat="item in scene1transcribe" class="card" data-drag="true" data-jqyoui-options="{revert: 'invalid', axis: 'y'}" jqyoui-draggable="{index: {{$index}}, animate:true}" style="z-index:9001;" ng-model="scene1transcribe">
         <div class="card-body" ng-dblclick="goToScene(item)" >
           {{item.title}}
+          <span class="pull-right"><i class="fa fa-user-circle"></i></span>
         </div>
       </div>
     </div>
@@ -67,12 +69,13 @@
       </div>
     </div>
   </div>
-  <div class="row" style="border-bottom:solid;">
-    <div class="col-md-2"><h3>Translate</h3></div>
+  <div class="row" style="border-bottom:solid 1px;">
+    <div class="col-md-2" style="display: flex; justify-content: center; align-items:center"><h3>Translate</h3></div>
     <div class="col-md-2" style="min-height:100px;" data-drop="true" jqyoui-droppable="{multiple:true}" ng-model="scene1translate">
       <div ng-repeat="item in scene1translate" class="card" data-drag="true" data-jqyoui-options="{revert: 'invalid', axis: 'y'}" jqyoui-draggable="{index: {{$index}}, animate:true}" style="z-index:9001;" ng-model="scene1translate">
         <div class="card-body" ng-dblclick="goToScene(item)" >
           {{item.title}}
+          <span class="pull-right"><i class="fa fa-user-circle"></i></span>
         </div>
       </div>
     </div>
@@ -98,12 +101,13 @@
       </div>
     </div>
   </div>
-  <div class="row" style="border-bottom:solid;">
-    <div class="col-md-2"><h3>Subtitle</h3></div>
+  <div class="row" style="border-bottom:solid 1px;">
+    <div class="col-md-2" style="display: flex; justify-content: center; align-items:center"><h3>Subtitle</h3></div>
     <div class="col-md-2" style="min-height:100px;" data-drop="true" jqyoui-droppable="{multiple:true}" ng-model="scene1subtitle">
       <div ng-repeat="item in scene1subtitle" class="card" data-drag="true" data-jqyoui-options="{revert: 'invalid', axis: 'y'}" jqyoui-draggable="{index: {{$index}}, animate:true}" style="z-index:9001;" ng-model="scene1subtitle">
         <div class="card-body" ng-dblclick="goToScene(item)" >
           {{item.title}}
+          <span class="pull-right"><i class="fa fa-user-circle"></i></span>
         </div>
       </div>
     </div>
@@ -130,11 +134,12 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-2"><h3>Done</h3></div>
+    <div class="col-md-2" style="display: flex; justify-content: center; align-items:center"><h3>Done</h3></div>
     <div class="col-md-2" style="min-height:100px;" data-drop="true" jqyoui-droppable="{multiple:true}" ng-model="scene1done">
       <div ng-repeat="item in scene1done" class="card" data-drag="true" data-jqyoui-options="{revert: 'invalid', axis: 'y'}" jqyoui-draggable="{index: {{$index}}, animate:true}" style="z-index:9001;" ng-model="scene1done">
         <div class="card-body" ng-dblclick="goToScene(item)" >
           {{item.title}}
+          <span class="pull-right"><i class="fa fa-user-circle"></i></span>
         </div>
       </div>
     </div>
