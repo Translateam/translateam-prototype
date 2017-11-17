@@ -1,99 +1,4 @@
 {
-  "comments": [
-    {
-      "sceneId": "3",
-      "comments": [
-        {
-          "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-        },
-        {
-          "text": "Something else"
-        },
-        {
-          "text": "Something elseeeee"
-        }
-      ],
-      "id": 2
-    },
-    {
-      "sceneId": "1",
-      "comments": [
-        {
-          "text": "id 1 : Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-        },
-        {
-          "text": "id 1 :  Something else"
-        },
-        {
-          "text": "id 1 : Something elseeeee"
-        },
-        {
-          "text": "adding new"
-        }
-      ],
-      "id": 3
-    },
-    {
-      "sceneId": "4",
-      "comments": [
-        {
-          "text": "new new new n"
-        },
-        {
-          "text": "hello id 4"
-        }
-      ],
-      "id": 4
-    },
-    {
-      "sceneId": "2",
-      "comments": [
-        {
-          "text": "testing a new comment"
-        },
-        {
-          "text": "testing again"
-        },
-        {
-          "text": "test comment"
-        },
-        {
-          "text": "testing comment"
-        },
-        {
-          "text": "test test"
-        },
-        {
-          "text": "test test"
-        },
-        {
-          "text": "test1"
-        },
-        {
-          "text": "test1"
-        },
-        {
-          "text": "test2"
-        },
-        {
-          "text": "test 3"
-        },
-        {
-          "text": "test4"
-        },
-        {
-          "text": "test final"
-        },
-        {
-          "text": "zebra"
-        },
-        {
-          "text": "abc"
-        }
-      ],
-      "id": 5
-    }
-  ],
   "projects": [
     {
       "id": 1,
@@ -133,22 +38,22 @@
   "transcripts": [
     {
       "id": 1,
-      "text": "ピカチュウ、君に決めた",
+      "text": "",
       "sceneId": 1
     },
     {
       "id": 2,
-      "text": "ピカチュウ、君に決めた",
+      "text": "",
       "sceneId": 2
     },
     {
       "id": 3,
-      "text": "ピカチュウ、君に決めた",
+      "text": "",
       "sceneId": 3
     },
     {
       "id": 4,
-      "text": "ピカチュウ、君に決めた",
+      "text": "",
       "sceneId": 4
     }
   ],
@@ -156,46 +61,25 @@
     {
       "id": 3,
       "sceneId": 3,
-      "text": "Pikachu, I choose you"
+      "text": ""
     },
     {
       "id": 4,
       "sceneId": 4,
-      "text": "abcdefg"
+      "text": ""
     },
     {
       "sceneId": 1,
-      "text": "hello",
+      "text": "",
       "id": 9
     },
     {
-      "sceneId": 1,
-      "text": "Pikachu, I choose you",
-      "id": 9
-    },
-    {
-      "sceneId": "2",
+      "sceneId": 2,
       "id": 10,
-      "text": "hello id 2 again"
+      "text": ""
     }
   ],
   "subtitles": [
-    {
-      "sceneId": "1",
-      "subs": [
-        {
-          "text": "Pikachu, I choose you",
-          "start": 3.211235,
-          "end": 6.716963
-        },
-        {
-          "text": "Something else",
-          "start": 9.712587,
-          "end": 13.961384
-        }
-      ],
-      "id": 1
-    }
   ],
   "comments": [
     {
@@ -225,53 +109,6 @@
       "projectId": 1,
       "username": "Disha",
       "commentText": "Some other thing about the video"
-    },
-    [
-      {
-        "id": 1,
-        "sceneId": 1,
-        "projectId": 1,
-        "username": "Yash",
-        "commentText": "Some comment about the video"
-      },
-      {
-        "id": 1,
-        "sceneId": 1,
-        "projectId": 1,
-        "username": "Evan",
-        "commentText": "Some other comment about the video"
-      },
-      {
-        "id": 1,
-        "sceneId": 1,
-        "projectId": 1,
-        "username": "Rohit",
-        "commentText": "Something about the video"
-      },
-      {
-        "id": 1,
-        "sceneId": 1,
-        "projectId": 1,
-        "username": "Disha",
-        "commentText": "Some other thing about the video"
-      }
-    ],
-    {
-      "sceneId": "1",
-      "username": "Test User",
-      "commentText": "I just want to feel important",
-      "id": 3
-    },
-    {
-      "sceneId": "1",
-      "username": "Test User",
-      "id": 4
-    },
-    {
-      "sceneId": "1",
-      "username": "Test User",
-      "commentText": "Testing comments",
-      "id": 5
     }
   ]
 }
