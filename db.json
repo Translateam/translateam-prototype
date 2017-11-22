@@ -11,28 +11,32 @@
       "title": "Scene 1",
       "videoUrl": "public/videos/video1.mp4",
       "projectId": 1,
-      "projectStage": "todo"
+      "projectStage": "todo",
+      "user_image": "public/images/first.jpeg"
     },
     {
       "id": 2,
       "title": "Scene 2",
       "videoUrl": "public/videos/video1.mp4",
       "projectId": 1,
-      "projectStage": "transcribe"
+      "projectStage": "transcribe",
+      "user_image": "public/images/second.jpeg"
     },
     {
       "id": 3,
       "title": "Scene 3",
       "videoUrl": "public/videos/video1.mp4",
       "projectId": 1,
-      "projectStage": "done"
+      "projectStage": "done",
+      "user_image": "public/images/third.jpeg"
     },
     {
       "id": 4,
       "title": "Scene 4",
       "videoUrl": "public/videos/video1.mp4",
       "projectId": 1,
-      "projectStage": "todo"
+      "projectStage": "todo",
+      "user_image": "public/images/fourth.jpeg"
     }
   ],
   "transcripts": [

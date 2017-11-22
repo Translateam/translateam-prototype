@@ -3,53 +3,153 @@
     <h1>This place will display the video time gaps</h1>
   </div>
   <div class="project-boards">
-    <ul dnd-list dnd-drop="onDrop(list, item, index)">
-      <li ng-repeat="item in list.items"
-          dnd-draggable="getSelectedItemsIncluding(list, item)"
-          dnd-dragstart="onDragstart(list, event)"
-          dnd-moved="onMoved(list)"
-          dnd-dragend="list.dragging = false"
-          dnd-selected="item.selected = !item.selected"
-          ng-class="{'selected': item.selected}"
-          ng-hide="list.dragging && item.selected"
-      >
-        {{item.label}}
-      </li>
-    </ul>
-    <div class="to-do-list">
-        <div class="card">
-          <div class="card">
-            <h4 class="card-title">ToDo</h4>
+    <div class="row">
+      <div class="columns">
+        <div class="card text-center">
+          <div class="card-body">
+            <h4 class="card-title">
+              ToDo
+            </h4>
+          </div>
+        </div>
+        <div class="card text-center">
+          <div class="card-body">
+            <h4 class="card-title">
+              Transcribe
+            </h4>
+          </div>
+        </div>
+        <div class="card text-center">
+          <div class="card-body">
+            <h4 class="card-title">
+              Translate
+            </h4>
+          </div>
+        </div>
+        <div class="card text-center">
+          <div class="card-body">
+            <h4 class="card-title">
+              Subtitle
+            </h4>
+          </div>
+        </div>
+        <div class="card text-center">
+          <div class="card-body">
+            <h4 class="card-title">
+              Done
+            </h4>
           </div>
         </div>
       </div>
-      <div class="transcribe-list">
-        <div class="card">
-          <div class="card">
-            <h4 class="card-title">Transcribe</h4>
+      <div class="columns">
+        <div class="card text-center card-biggest">
+          <div class="card-body">
+            <h4 class="card-title">
+              Scene 1
+            </h4>
+            <div class="user-profile-image">
+              <img src="../public/images/first.jpeg">
+            </div>
           </div>
         </div>
       </div>
-      <div class="translate-list">
-        <div class="card">
-          <div class="card">
-            <h4 class="card-title">Translate</h4>
+      <div class="columns">
+        <div class="card-empty text-center">
+          <div class="card-body">
+            <h4 class="card-title"></h4>
+          </div>
+        </div>
+        <div class="card text-center card-smallest">
+          <div class="card-body">
+            <h4 class="card-title">
+              Scene 2
+            </h4>
+            <div class="user-profile-image">
+              <img src="../public/images/second.jpeg">
+            </div>
           </div>
         </div>
       </div>
-      <div class="subtitle-list">
-        <div class="card">
-          <div class="card">
-            <h4 class="card-title">Subtitle</h4>
+      <div class="columns">
+        <div class="card-empty text-center">
+          <div class="card-body">
+            <h4 class="card-title"></h4>
+          </div>
+        </div>
+        <div class="card-empty text-center">
+          <div class="card-body">
+            <h4 class="card-title"></h4>
+          </div>
+        </div>
+        <div class="card-empty text-center">
+          <div class="card-body">
+            <h4 class="card-title"></h4>
+          </div>
+        </div>
+        <div class="card-empty text-center">
+          <div class="card-body">
+            <h4 class="card-title"></h4>
+          </div>
+        </div>
+        <div class="card text-center">
+          <div class="card-body">
+            <h4 class="card-title card-big">
+              Scene 3
+            </h4>
+            <div class="user-profile-image">
+              <img src="../public/images/third.jpeg">
+            </div>
           </div>
         </div>
       </div>
-      <div class="done-list">
-        <div class="card">
-          <div class="card">
-            <h4 class="done-title">Done</h4>
+      <div class="columns">
+        <div class="card text-center">
+          <div class="card-body">
+            <h4 class="card-title card-small">
+              Scene 4
+            </h4>
+            <div class="user-profile-image">
+              <img src="../public/images/fourth.jpeg">
+            </div>
           </div>
         </div>
       </div>
+    </div>
+
+    <!--<div class="to-do-list">-->
+        <!--<div class="card">-->
+          <!--<div class="card">-->
+            <!--<h4 class="card-title">ToDo</h4>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="transcribe-list">-->
+        <!--<div class="card">-->
+          <!--<div class="card">-->
+            <!--<h4 class="card-title">Transcribe</h4>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="translate-list">-->
+        <!--<div class="card">-->
+          <!--<div class="card">-->
+            <!--<h4 class="card-title">Translate</h4>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="subtitle-list">-->
+        <!--<div class="card">-->
+          <!--<div class="card">-->
+            <!--<h4 class="card-title">Subtitle</h4>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="done-list">-->
+        <!--<div class="card">-->
+          <!--<div class="card">-->
+            <!--<h4 class="done-title">Done</h4>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
   </div>
 </div>
