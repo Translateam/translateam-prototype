@@ -89,3 +89,8 @@
 .card-smallest {
   width: 150px;
 }
+
+.card {
+  margin-top: 10px;
+  min-height: 83px;
+}

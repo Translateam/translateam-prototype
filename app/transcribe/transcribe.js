@@ -43,7 +43,7 @@ angular.module('translateam.transcribe', ['ngRoute'])
         var transcriptionId  = self.transcripts.id;
         self.transcripts.text  = transcriptionValue;
         TranscriptionUpdate.update({resId : transcriptionId}, self.transcripts);
-        $location.url("/view1");
+        $location.url("/project");
       }else{
         self.transcripts = {};
         self.transcripts.sceneId = sceneId;
@@ -51,7 +51,7 @@ angular.module('translateam.transcribe', ['ngRoute'])
         var transcriptionId  = currentdate.getTime();
         self.transcripts.text  = transcriptionValue;
         TranscriptionUpdate.save(self.transcripts);
-        $location.url("/view1");
+        $location.url("/project");
       }
     };
 

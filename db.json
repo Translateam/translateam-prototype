@@ -10,117 +10,83 @@
       "id": 1,
       "title": "Scene 1",
       "videoUrl": "public/videos/video1.mp4",
-      "projectId": 1,
-      "projectStage": "todo",
-      "user_image": "public/images/first.jpeg"
+      "progress": "todo",
+      "projectId": 1
     },
     {
       "id": 2,
       "title": "Scene 2",
       "videoUrl": "public/videos/video1.mp4",
-      "projectId": 1,
-      "projectStage": "transcribe",
-      "user_image": "public/images/second.jpeg"
+      "progress": "subtitle",
+      "projectId": 1
     },
     {
       "id": 3,
       "title": "Scene 3",
       "videoUrl": "public/videos/video1.mp4",
-      "projectId": 1,
-      "projectStage": "done",
-      "user_image": "public/images/third.jpeg"
+      "progress": "todo",
+      "projectId": 1
     },
     {
       "id": 4,
       "title": "Scene 4",
       "videoUrl": "public/videos/video1.mp4",
-      "projectId": 1,
-      "projectStage": "todo",
-      "user_image": "public/images/fourth.jpeg"
+      "progress": "todo",
+      "projectId": 1
     }
   ],
   "transcripts": [
     {
       "id": 1,
-      "text": "ピカチュウ、君に決めた",
+      "text": "",
       "sceneId": 1
     },
     {
       "id": 2,
-      "text": "ピカチュウ、君に決めた",
+      "text": "今実すリとめ見応無ゅょみぴ反略存ッ",
       "sceneId": 2
     },
     {
       "id": 3,
-      "text": "ピカチュウ、君に決めた",
+      "text": "",
       "sceneId": 3
     },
     {
       "id": 4,
-      "text": "ピカチュウ、君に決めた",
+      "text": "",
       "sceneId": 4
     }
   ],
   "translations": [
     {
       "id": 3,
-      "sceneId": 3
+      "sceneId": 3,
+      "text": ""
     },
     {
       "id": 4,
       "sceneId": 4,
-      "text": "abcdefg"
-    },
-    {
-      "id": 5
-    },
-    {
-      "0": {
-        "text": "test test",
-        "sceneId": 2,
-        "id": 2
-      },
-      "id": 2
-    },
-    {
-      "id": 6,
-      "sceneId": 1
-    },
-    {
-      "id": 7,
-      "sceneId": 2
-    },
-    {
-      "id": 8,
-      "sceneId": 1
+      "text": ""
     },
     {
       "sceneId": 1,
-      "text": "hello",
+      "text": "",
       "id": 9
     },
     {
-      "sceneId": 3,
-      "id": 10
-    },
-    {
-      "sceneId": 4,
-      "id": 11
+      "sceneId": 2,
+      "id": 10,
+      "text": "This is a lorem ipsum text"
     }
   ],
   "subtitles": [
     {
-      "sceneId": "1",
+      "sceneId": "2",
       "subs": [
         {
-          "text": "Pikachu, I choose you",
-          "start": 3.211235,
-          "end": 6.716963
-        },
-        {
-          "text": "Something else",
-          "start": 9.712587,
-          "end": 13.961384
+          "text": "This is a lorem ipsum text",
+          "start": "1.23",
+          "end": "2.5"
         }
       ],
       "id": 1
@@ -154,53 +120,6 @@
       "projectId": 1,
       "username": "Disha",
       "commentText": "Some other thing about the video"
-    },
-    [
-      {
-        "id": 1,
-        "sceneId": 1,
-        "projectId": 1,
-        "username": "Yash",
-        "commentText": "Some comment about the video"
-      },
-      {
-        "id": 1,
-        "sceneId": 1,
-        "projectId": 1,
-        "username": "Evan",
-        "commentText": "Some other comment about the video"
-      },
-      {
-        "id": 1,
-        "sceneId": 1,
-        "projectId": 1,
-        "username": "Rohit",
-        "commentText": "Something about the video"
-      },
-      {
-        "id": 1,
-        "sceneId": 1,
-        "projectId": 1,
-        "username": "Disha",
-        "commentText": "Some other thing about the video"
-      }
-    ],
-    {
-      "sceneId": "1",
-      "username": "Test User",
-      "commentText": "I just want to feel important",
-      "id": 3
-    },
-    {
-      "sceneId": "1",
-      "username": "Test User",
-      "id": 4
-    },
-    {
-      "sceneId": "1",
-      "username": "Test User",
-      "commentText": "Testing comments",
-      "id": 5
     }
   ]
 }

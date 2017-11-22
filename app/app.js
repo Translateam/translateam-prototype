@@ -4,6 +4,7 @@
 var app = angular.module('translateam', [
   'ngRoute',
   'ngResource',
+  'ngDragDrop',
   'ncy-angular-breadcrumb',
   'ui.router',
   'translateam.translateService',
@@ -12,6 +13,7 @@ var app = angular.module('translateam', [
   'translateam.subtitle',
   'translateam.translate',
   'translateam.transcribe',
+  'translateam.project',
   'translateam.version',
   'translateam.video-player',
   'translateam.project',
@@ -46,7 +48,7 @@ config(['$locationProvider', '$routeProvider', '$stateProvider', '$breadcrumbPro
 
   states.forEach($stateProvider.state);
 
-  $routeProvider.otherwise('/view1');
+  $routeProvider.otherwise('/project');
 
   $breadcrumbProvider.setOptions({
     template: '<ol class="breadcrumb" ng-init="routes = ' + JSON.stringify(states).replace(/"/g, "'") + '">' +

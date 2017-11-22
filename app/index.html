@@ -18,13 +18,7 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.4.0/wavesurfer.min.js"></script>
 </head>
 <body>
-<div ng-include="'header.html'"></div>
-  <ul class="menu">
-    <li><a href="#!/view1">view1</a></li>
-    <li><a href="#!/viewElement">view2</a></li>
-    <li><a href="#!/subtitle">subtitle</a></li>
-    <li><a href="#!/translate">translate</a></li>
-  </ul>
+  <div ng-include="'header.html'"></div>
 
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -37,9 +31,13 @@
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-dragdrop/src/angular-dragdrop.min.js"></script>
+  <script src="bower_components/angular-drag-and-drop-lists/angular-drag-and-drop-lists.min.js"></script>
   <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
   <script data-require="angular-breadcrumb@0.4.1" data-semver="0.4.1" src="https://rawgithub.com/ncuillery/angular-breadcrumb/master/release/angular-breadcrumb.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -48,6 +46,7 @@
   <script src="app.js"></script>
   <script src="view1/view1.js"></script>
   <script src="view2/view2.js"></script>
+  <script src="project/project.js"></script>
   <script src="subtitle/subtitle.js"></script>
   <script src ="project/project.js"></script>
   <script src="translate/translate.js"></script>
