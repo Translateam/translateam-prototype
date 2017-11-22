@@ -38,11 +38,18 @@ makes it easier to serve the files by a web server.*
 ### Run the Application
 
 We have preconfigured the project with a simple development web server. The simplest way to start
-this server is:
+the production database server is:
 
 ```
 npm start
 ```
+
+* To start the development server use: *
+
+```
+npm run start-dev
+```
+
 
 Now browse to the app at [`localhost:8000/index.html`][local-app-url].
 
